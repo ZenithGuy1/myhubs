@@ -24,8 +24,9 @@ local Section = Tab:AddSection({
 Section:AddToggle({
     Name = "Auto Merge",
     Default = false,
-    Callback = function()
-            while true do
+    Callback = function(Value)
+        Merge = Value
+            while Merge do
                 wait(0.5)
                 game:GetService("ReplicatedStorage"):WaitForChild("GTycoonClient"):WaitForChild("Remotes"):WaitForChild("MergeDroppers"):FireServer()
             end
