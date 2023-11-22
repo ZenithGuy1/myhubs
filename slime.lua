@@ -44,3 +44,7 @@ Section:AddToggle({
             end
         end
     })
+
+Section:AddDropdown({
+        Name = "Slime Amount",
+        Default = "",
