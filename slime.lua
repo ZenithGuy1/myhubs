@@ -36,15 +36,25 @@ Section:AddToggle({
 Section:AddDropdown({
         Name = "Slime Amount",
         Default = "",
-        Options = {"1","5","25","50","100"},
+        Options = {"1","5","25","50","100","1000"},
         Callback = function(Value)
             Amount = Value
         end
     })
 
-Section:AddButton({
-        Name = "...",
+function buy()
+    if Amount == 1 then
+        local args = {
+    [1] = 1
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GTycoonClient"):WaitForChild("Remotes"):WaitForChild("BuyDropper"):FireServer(unpack(args))
+    elseif Amount == 5 then
+        
+Section:AddToggle({
+        Name = "Buy Slime",
+        Default = false,
         Callback = function()
-            print(Amount)
+            buy()
         end
     })
