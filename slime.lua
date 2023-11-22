@@ -48,3 +48,12 @@ Section:AddToggle({
 Section:AddDropdown({
         Name = "Slime Amount",
         Default = "",
+        Options = {"1","5","25","50",100},
+        Callback = function(Value)
+            Amount = Value
+        end
+    })
+
+function buy()
+    if Amount.Value == 1 then
+        
