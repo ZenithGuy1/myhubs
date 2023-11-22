@@ -49,7 +49,41 @@ function buy()
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("GTycoonClient"):WaitForChild("Remotes"):WaitForChild("BuyDropper"):FireServer(unpack(args))
+    
     elseif Amount == 5 then
+        local args = {
+    [1] = 5
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GTycoonClient"):WaitForChild("Remotes"):WaitForChild("BuyDropper"):FireServer(unpack(args))
+
+    elseif Amount == 25 then
+        local args = {
+    [1] = 25
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GTycoonClient"):WaitForChild("Remotes"):WaitForChild("BuyDropper"):FireServer(unpack(args))
+
+    elseif Amount == 50 then
+        local args = {
+    [1] = 50
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GTycoonClient"):WaitForChild("Remotes"):WaitForChild("BuyDropper"):FireServer(unpack(args))
+
+    elseif Amount == 100 then
+        local args = {
+    [1] = 100
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GTycoonClient"):WaitForChild("Remotes"):WaitForChild("BuyDropper"):FireServer(unpack(args))
+
+    elseif Amount == 1000 then
+        local args = {
+    [1] = 1000
+}
+    end
+game:GetService("ReplicatedStorage"):WaitForChild("GTycoonClient"):WaitForChild("Remotes"):WaitForChild("BuyDropper"):FireServer(unpack(args))
         
 Section:AddToggle({
         Name = "Buy Slime",
