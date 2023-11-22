@@ -34,7 +34,7 @@ Section:AddToggle({
     })
 
 Section:AddToggle({
-        Name "Auto Deposit",
+        Name = "Auto Deposit",
         Default = false,
         Callback = function(Value)
             Deposit = Value
