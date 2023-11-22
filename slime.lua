@@ -38,6 +38,13 @@ Section:AddDropdown({
         Default = "",
         Options = {"1","5","25","50","100"},
         Callback = function(Value)
-            print(Value)
+            Amount = Value
+        end
+    })
+
+Section:AddButton({
+        Name = "...",
+        Callback = function()
+            print(Amount)
         end
     })
