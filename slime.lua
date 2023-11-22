@@ -23,4 +23,7 @@ local Section = Tab:AddSection({
 
 Section:AddToggle({
     Name = "Auto Merge",
-    Default = false
+    Default = false,
+    Callback = function()
+            while true do
+                
