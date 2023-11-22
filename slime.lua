@@ -32,3 +32,15 @@ Section:AddToggle({
             end
         end
     })
+
+Section:AddToggle({
+        Name "Auto Deposit",
+        Default = false,
+        Callback = function(Value)
+            Deposit = Value
+                while Deposit do
+                    wait(0.5)
+                    game:GetService("ReplicatedStorage"):WaitForChild("GTycoonClient"):WaitForChild("Remotes"):WaitForChild("DepositDrops"):FireServer()
+            end
+        end
+    })
