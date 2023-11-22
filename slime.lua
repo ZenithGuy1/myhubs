@@ -26,4 +26,8 @@ Section:AddToggle({
     Default = false,
     Callback = function()
             while true do
-                
+                wait(0.5)
+                game:GetService("ReplicatedStorage"):WaitForChild("GTycoonClient"):WaitForChild("Remotes"):WaitForChild("MergeDroppers"):FireServer()
+            end
+        end
+    })
