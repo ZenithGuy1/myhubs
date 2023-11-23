@@ -8,6 +8,12 @@ local Tab = Window:MakeTab({
     PremiumOnly = false
 })
 
+local Tab2 = Window:MakeTab({
+        Name = "Slimes",
+        Icon = "rbxassetid://7734056813",
+        PremiumOnly = false
+    })
+
 Tab:AddLabel("Made by @zenithguy")
 
 Tab:AddButton({
@@ -33,16 +39,7 @@ Section:AddToggle({
         end
     })
 
-Section:AddDropdown({
-        Name = "Slime Amount",
-        Default = "",
-        Options = {"1","5","25","50","100","1000"},
-        Callback = function(Value)
-            Amount = Value
-        end
-    })
-
-Section:AddButton({
+Tab2:AddButton({
      Name = "Buy 1 Slime",
      Callback = function()
          local args = {
@@ -53,7 +50,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("GTycoonClient"):WaitForChild(
      end
 })
 
-Section:AddButton({
+Tab2:AddButton({
      Name = "Buy 5 Slime",
      Callback = function()
          local args = {
@@ -64,7 +61,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("GTycoonClient"):WaitForChild(
      end
 })
 
-Section:AddButton({
+Tab:AddButton({
      Name = "Buy 25 Slime",
      Callback = function()
          local args = {
@@ -75,7 +72,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("GTycoonClient"):WaitForChild(
      end
 })
 
-Section:AddButton({
+Tab2:AddButton({
      Name = "Buy 50 Slime",
      Callback = function()
          local args = {
@@ -86,7 +83,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("GTycoonClient"):WaitForChild(
      end
 })
 
-Section:AddButton({
+Tab2:AddButton({
      Name = "Buy 100 Slime",
      Callback = function()
          local args = {
@@ -97,7 +94,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("GTycoonClient"):WaitForChild(
      end
 })
 
-Section:AddButton({
+Tab2:AddButton({
      Name = "Buy 1000 Slime",
      Callback = function()
          local args = {
