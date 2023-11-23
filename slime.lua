@@ -160,14 +160,17 @@ game:GetService("ReplicatedStorage"):WaitForChild("GTycoonClient"):WaitForChild(
 Tab2:AddToggle({
      Name = "Auto Buy 50 Slime",
      Default = false,
-     Callback = function()
-        wait(0.5) 
+     Callback = function(Value)
+            Slime50 = Value
+            while Slime50 do
+        wait(1)
         local args = {
     [1] = 50
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("GTycoonClient"):WaitForChild("Remotes"):WaitForChild("BuyDropper"):FireServer(unpack(args))
-     end
+            end
+        end
 })
 
 Tab2:AddButton({
@@ -184,14 +187,17 @@ game:GetService("ReplicatedStorage"):WaitForChild("GTycoonClient"):WaitForChild(
 Tab2:AddToggle({
      Name = "Auto Buy 100 Slime",
      Default = false,
-     Callback = function()
-        wait(0.5) 
+     Callback = function(Value)
+                Slime100 = Value
+            while Slime100 do
+        wait(1) 
         local args = {
     [1] = 1
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("GTycoonClient"):WaitForChild("Remotes"):WaitForChild("BuyDropper"):FireServer(unpack(args))
-     end
+                end
+            end
 })
 
 Tab2:AddButton({
@@ -208,12 +214,15 @@ game:GetService("ReplicatedStorage"):WaitForChild("GTycoonClient"):WaitForChild(
 Tab2:AddToggle({
      Name = "Auto Buy 1000 Slime",
      Default = false,
-     Callback = function()
+     Callback = function(Value)
+                Slime1K = Value
+            while Slime1K do
         wait(0.5) 
         local args = {
     [1] = 1000
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("GTycoonClient"):WaitForChild("Remotes"):WaitForChild("BuyDropper"):FireServer(unpack(args))
-     end
-})
+                    end
+                end
+            })
