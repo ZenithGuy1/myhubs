@@ -82,9 +82,8 @@ game:GetService("ReplicatedStorage"):WaitForChild("GTycoonClient"):WaitForChild(
 game:GetService("ReplicatedStorage"):WaitForChild("GTycoonClient"):WaitForChild("Remotes"):WaitForChild("BuyDropper"):FireServer(unpack(args))
     end
 end
-Section:AddToggle({
+Section:AddButton({
      Name = "Buy Slime",
-     Default = false,
      Callback = function()
          buy()
      end
