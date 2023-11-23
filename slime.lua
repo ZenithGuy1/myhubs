@@ -44,24 +44,11 @@ Section:AddDropdown({
 
 function buy()
     if Amount.Value == 1 then
-        local args = {
-    [1] = 1
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("GTycoonClient"):WaitForChild("Remotes"):WaitForChild("BuyDropper"):FireServer(unpack(args))
+    print("1")
     elseif Amount.Value == 5 then
-        local args = {
-    [1] = 5
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("GTycoonClient"):WaitForChild("Remotes"):WaitForChild("BuyDropper"):FireServer(unpack(args))
-
+        print("5")
     elseif Amount.Value == 25 then
-        local args = {
-    [1] = 25
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("GTycoonClient"):WaitForChild("Remotes"):WaitForChild("BuyDropper"):FireServer(unpack(args))
+        print("25")
     elseif Amount.Value == 50 then
         local args = {
     [1] = 50
