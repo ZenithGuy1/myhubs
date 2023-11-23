@@ -43,28 +43,16 @@ Section:AddToggle({
             end
         end
     })
-Tab:AddSlider({
-        Name = "Droplet Amount",
-        Min = 1,
-        Max = 100000000,
-        Default = 100000,
-        Color = Color3.fromRGB(0, 200, 0),
-        Increment = 100,
-        ValueName = "Droplets",
-        Callback = function(Value)
-            Droplets = Value
-        end
-    })
 
 Tab:AddToggle({
-        Name = "Get Droplets (dont manually collect for it to work)",
+        Name = "Auto collect droplets",
         Default = false,
         Callback = function(Value)
         Status = Value
             while Status do
             wait(0.5)
             local args = {
-    [1] = Droplets
+    [1] = 999999999999999999
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("GTycoonClient"):WaitForChild("Remotes"):WaitForChild("GrabDrops"):FireServer(unpack(args))
