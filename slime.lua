@@ -60,10 +60,15 @@ game:GetService("ReplicatedStorage"):WaitForChild("GTycoonClient"):WaitForChild(
     end
 })
 
-Tab:AddButton({
+Tab:AddToggle({
 		Name = "Auto Deposit Droplets",
-		Callback = function()
-			game:GetService("ReplicatedStorage").GTycoonClient.Remotes.DepositDrops:FireServer()
+		Default = false,
+		Callback = function(Value)
+			Deposit = Value
+			while Deposit do
+				wait(0.2)
+				game:GetService("ReplicatedStorage").GTycoonClient.Remotes.DepositDrops:FireServer()
+			end
 		end
 	})
 Tab2:AddButton({
