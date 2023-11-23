@@ -42,38 +42,68 @@ Section:AddDropdown({
         end
     })
 
-function buy()
-    if Amount.Value == 1 then
-    print("1")
-    elseif Amount.Value == 5 then
-        print("5")
-    elseif Amount.Value == 25 then
-        print("25")
-    elseif Amount.Value == 50 then
-        local args = {
+Section:AddButton({
+     Name = "Buy 1 Slime",
+     Callback = function()
+         local args = {
+    [1] = 1
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GTycoonClient"):WaitForChild("Remotes"):WaitForChild("BuyDropper"):FireServer(unpack(args))
+     end
+})
+
+Section:AddButton({
+     Name = "Buy 5 Slime",
+     Callback = function()
+         local args = {
+    [1] = 5
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GTycoonClient"):WaitForChild("Remotes"):WaitForChild("BuyDropper"):FireServer(unpack(args))
+     end
+})
+
+Section:AddButton({
+     Name = "Buy 25 Slime",
+     Callback = function()
+         local args = {
+    [1] = 25
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GTycoonClient"):WaitForChild("Remotes"):WaitForChild("BuyDropper"):FireServer(unpack(args))
+     end
+})
+
+Section:AddButton({
+     Name = "Buy 50 Slime",
+     Callback = function()
+         local args = {
     [1] = 50
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("GTycoonClient"):WaitForChild("Remotes"):WaitForChild("BuyDropper"):FireServer(unpack(args))
-    elseif Amount.Value == 100 then
-        local args = {
+     end
+})
+
+Section:AddButton({
+     Name = "Buy 100 Slime",
+     Callback = function()
+         local args = {
     [1] = 100
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("GTycoonClient"):WaitForChild("Remotes"):WaitForChild("BuyDropper"):FireServer(unpack(args))
-    elseif Amount.Value == 1000 then
-        local args = {
+     end
+})
+
+Section:AddButton({
+     Name = "Buy 1000 Slime",
+     Callback = function()
+         local args = {
     [1] = 1000
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("GTycoonClient"):WaitForChild("Remotes"):WaitForChild("BuyDropper"):FireServer(unpack(args))
-    else
-        
-    end
-end
-Section:AddButton({
-     Name = "Buy Slime",
-     Callback = function()
-         buy()
      end
 })
