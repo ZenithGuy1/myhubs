@@ -59,6 +59,13 @@ game:GetService("ReplicatedStorage"):WaitForChild("GTycoonClient"):WaitForChild(
         end
     end
 })
+
+Tab:AddButton({
+		Name = "Auto Deposit Droplets",
+		Callback = function()
+			game:GetService("ReplicatedStorage").GTycoonClient.Remotes.DepositDrops:FireServer()
+		end
+	})
 Tab2:AddButton({
      Name = "Buy 1 Slime",
      Callback = function()
