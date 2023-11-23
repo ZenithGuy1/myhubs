@@ -242,5 +242,20 @@ Tab3:AddSlider({
         ValueName = "WS",
         Callback = function(Value)
             game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+            Speed = Value
         end
     })
+
+Tab3:AddToggle({
+        Name = "Keep WalkSpeed",
+        Default = false,
+        Callback = function(Value)
+            KeepWS = Value
+            while KeepWS do
+                if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") ~= nil and game.Players.LocalPlayer.Character.Humanoid.WalkSpeed ~= Walkspeed then
+                    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Speed
+                end
+task.wait()
+            end
+	end    
+})
