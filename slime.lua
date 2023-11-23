@@ -71,6 +71,23 @@ Tab:AddToggle({
 			end
 		end
 	})
+
+Tab:AddToggle({
+		Name = "Auto Buy Rate",
+		Default = false,
+		Callback = function(Value)
+			Rate = Value
+			while rate do
+				wait(0.2)
+				local args = {
+					[1] = 1
+				}
+
+				game:GetService("ReplicatedStorage").GTycoonClient.Remotes.BuySpeed:FireServer(unpack(args))
+			end
+		end
+	})
+
 Tab2:AddButton({
      Name = "Buy 1 Slime",
      Callback = function()
