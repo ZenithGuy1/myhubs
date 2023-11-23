@@ -14,6 +14,11 @@ local Tab2 = Window:MakeTab({
         PremiumOnly = false
     })
 
+local Tab3 = Window:MakeTab({
+        Name = "Local Player",
+        Icon = "http://www.roblox.com/asset/?id=4335489011",
+        PremiumOnly = false
+    })
 Tab:AddLabel("Made by @zenithguy")
 
 Tab:AddButton({
@@ -226,3 +231,16 @@ game:GetService("ReplicatedStorage"):WaitForChild("GTycoonClient"):WaitForChild(
                     end
                 end
             })
+
+Tab3:AddSlider({
+        Name = "Speed",
+        Min = 16,
+        Max = 500,
+        Default = 16,
+        Increment = 1,
+        Color = Color3.fromRGB(140, 185, 255),
+        ValueName = "WS",
+        Callback = function(Value)
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+        end
+    })
