@@ -43,43 +43,45 @@ Section:AddDropdown({
     })
 
 function buy()
-    if Amount == 1 then
+    if Amount.Value == 1 then
         local args = {
     [1] = 1
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("GTycoonClient"):WaitForChild("Remotes"):WaitForChild("BuyDropper"):FireServer(unpack(args))
-    elseif Amount == 5 then
+    elseif Amount.Value == 5 then
         local args = {
     [1] = 5
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("GTycoonClient"):WaitForChild("Remotes"):WaitForChild("BuyDropper"):FireServer(unpack(args))
 
-    elseif Amount == 25 then
+    elseif Amount.Value == 25 then
         local args = {
     [1] = 25
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("GTycoonClient"):WaitForChild("Remotes"):WaitForChild("BuyDropper"):FireServer(unpack(args))
-    elseif Amount == 50 then
+    elseif Amount.Value == 50 then
         local args = {
     [1] = 50
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("GTycoonClient"):WaitForChild("Remotes"):WaitForChild("BuyDropper"):FireServer(unpack(args))
-    elseif Amount == 100 then
+    elseif Amount.Value == 100 then
         local args = {
     [1] = 100
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("GTycoonClient"):WaitForChild("Remotes"):WaitForChild("BuyDropper"):FireServer(unpack(args))
-    elseif Amount == 1000 then
+    elseif Amount.Value == 1000 then
         local args = {
     [1] = 1000
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("GTycoonClient"):WaitForChild("Remotes"):WaitForChild("BuyDropper"):FireServer(unpack(args))
+    else
+        
     end
 end
 Section:AddButton({
