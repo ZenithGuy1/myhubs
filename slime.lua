@@ -77,7 +77,7 @@ Tab:AddToggle({
 		Default = false,
 		Callback = function(Value)
 			Rate = Value
-			while rate do
+			while Rate do
 				wait(0.2)
 				local args = {
 					[1] = 1
