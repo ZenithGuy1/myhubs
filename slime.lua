@@ -276,31 +276,3 @@ task.wait()
             end
 	end    
 })
-
-Tab3:AddSlider({
-        Name = "JumpPower",
-        Min = 16,
-        Max = 500,
-        Default = 16,
-        Increment = 1,
-        Color = Color3.fromRGB(140, 185, 255),
-        ValueName = "JP",
-        Callback = function(Value)
-            game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
-            Jump = Value
-        end
-    })
-
-Tab3:AddToggle({
-        Name = "Keep JumpPower",
-        Default = false,
-        Callback = function(Value)
-            KeepJP= Value
-            while KeepJp do
-                if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") ~= nil and game.Players.LocalPlayer.Character.Humanoid.JumpPower ~= Jump then
-                    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Jump
-                end
-task.wait()
-            end
-	end    
-})
