@@ -4,7 +4,7 @@ end
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Mobile%20Friendly%20Orion')))()
 
-local Window = OrionLib:MakeWindow({Name = "Sitzo Hub | Arm Wrestling Simulator", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest",IntroText = "Sitzo Hub | AWS",IntroIcon = "rbxassetid://7733678388"})
+local Window = OrionLib:MakeWindow({Name = "Sitzo Hub | Get Richer Every Click", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest",IntroText = "Sitzo Hub | GREC",IntroIcon = "rbxassetid://7733678388"})
 
 local Tab = Window:MakeTab({
     Name = "Main",
@@ -33,8 +33,5 @@ Tab:AddButton({
             OrionLib:Destroy()
         end
     })
-
-local Section = Tab2:AddSection({Name = "Stat Equips"})
-
 
 OrionLib:Init()
