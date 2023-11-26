@@ -36,12 +36,5 @@ Tab:AddButton({
 
 local Section = Tab2:AddSection({Name = "Stat Equips"})
 
-Section:AddDropdown({
-        Name = "Farming Method",
-        Default = "",
-        Options = {"Grips", "Dumbells", "Barbells"},
-        Callback = function(Value)
-            print(Value)
-        end
-    })
+
 OrionLib:Init()
