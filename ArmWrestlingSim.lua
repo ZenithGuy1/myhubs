@@ -41,6 +41,6 @@ Section:AddDropdown({
         Default = "",
         Options = {"Grips", "Dumbells", "Barbells"},
         Callback = function(Value)
-            Method = Value
+            print(Value)
         })
 OrionLib:Init()
