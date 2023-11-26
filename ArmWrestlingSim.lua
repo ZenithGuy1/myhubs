@@ -11,3 +11,6 @@ local Tab = Window:MakeTab({
     Icon = "http://www.roblox.com/asset/?id=4370345144",
     PremiumOnly = false
   })
+
+
+OrionLib:Init()
