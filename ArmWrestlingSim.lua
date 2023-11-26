@@ -34,7 +34,9 @@ Tab:AddButton({
         end
     })
 
-Tab2:AddDropdown({
+local Section = Tab2:AddSection({Name = "Autoclicker"})
+
+Section:AddDropdown({
         Name = "Clicker Speed",
         Default = "0.25",
         Options = {"0.01","0.05","0.10","0.25","0.50","0.75"},
@@ -43,7 +45,7 @@ Tab2:AddDropdown({
         end
     })
 
-Tab2:AddToggle({
+Section:AddToggle({
         Name = "Autoclicker",
         Default = false,
         Callback = function(Value)
