@@ -33,4 +33,6 @@ Tab:AddButton({
             OrionLib:Destroy()
         end
     })
+
+local Section = Tab2:AddSection({Name = "Stat Equips"})
 OrionLib:Init()
