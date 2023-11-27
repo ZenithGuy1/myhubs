@@ -4,7 +4,7 @@ end
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Mobile%20Friendly%20Orion')))()
 
-local Window = OrionLib:MakeWindow({Name = "Sitzo Hub | Get Richer Every Click", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest",IntroText = "Sitzo Hub | GREC",IntroIcon = "rbxassetid://7733678388"})
+local Window = OrionLib:MakeWindow({Name = "Sitzo Hub | Money Grab Simulator", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest",IntroText = "Sitzo Hub | MGS",IntroIcon = "rbxassetid://7733678388"})
 
 local Tab = Window:MakeTab({
     Name = "Main",
@@ -31,6 +31,21 @@ Tab:AddButton({
         Name = "Destroy GUI",
         Callback = function()
             OrionLib:Destroy()
+        end
+    })
+
+local Section = Tab2:AddSection({Name = "Train"})
+
+Section:AddDropdown({
+        Name = "Train Speed",
+        Default = "select...",
+        Options = {"0","0.01","0.05","0.10","0.25","0.50"}
+        Callback = function(Value)
+            Speed = Value
+            if Speed == "select..." then
+                Speed = nil
+                print(Speed)
+            end
         end
     })
 
