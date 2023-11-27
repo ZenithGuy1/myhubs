@@ -69,4 +69,10 @@ game:GetService("ReplicatedStorage"):WaitForChild("Event"):WaitForChild("Train")
             end
         end
     })
+
+local Section2 = Tab2:AddSection({Name = "Money"})
+
+Section2:AddSlider({
+        Name = "Amount",
+        
 OrionLib:Init()
