@@ -44,8 +44,8 @@ Section:AddDropdown({
             Speed = Value
             if Speed == "select..." then
                 Speed = nil
-                print(Speed)
             end
+            print(Speed)
         end
     })
 
