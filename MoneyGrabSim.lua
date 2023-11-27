@@ -74,7 +74,40 @@ local Section2 = Tab2:AddSection({Name = "Money"})
 
 Section2:AddSlider({
         Name = "Amount",
-        Min = 1,
+        Min = 5,
         Max = 100000,
-        Color = Color3.fromRGB(
+        Color = Color3.fromRGB(255, 230, 70)
+        Increment = 5,
+        ValueName = "Cash",
+        Callback = function(Value)
+            Cash = Value
+        end
+    })
+
+Section2:AddButton({
+        Name = "Get Money",
+        Callback = function()
+            local args = {
+    [1] = Cash
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Event"):WaitForChild("WinGain"):FireServer(unpack(args))
+        end
+    })
+
+Section2:AddToggle({
+        Name = "Auto Money",
+        Default = false
+        Callback = function(Value)
+            GetMoney = Value
+            while GetMoney do
+                wait(0.75)
+                local args = {
+    [1] = Cash
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Event"):WaitForChild("WinGain"):FireServer(unpack(args))
+            end
+        end
+    })
 OrionLib:Init()
