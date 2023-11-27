@@ -37,13 +37,33 @@ Tab:AddButton({
 local Section = Tab2:AddSection({Name = "Train"})
 
 Section:AddDropdown({
-        Name = "Train Speed",
-        Default = "select...",
-        Options = {"0","0.01","0.05","0.10","0.25","0.50"},
+        Name = "Training Level",
+        Default = "",
+        Options = {"1","2","3","4"},
         Callback = function(Value)
-            Speed = Value
-            print(Speed)
+            Level = Value
         end
     })
 
+Section:AddDropdown({
+        Name = "Train Speed",
+        Default = "",
+        Options = {"0","0.01","0.05","0.10","0.25","0.50"},
+        Callback = function(Value)
+            Speed = Value
+        end
+    })
+
+Section:AddToggle({
+        Name = "Auto Train",
+        Default = false,
+        Callback = function()
+            wait(Speed)
+            local args = {
+    [1] = Level
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Event"):WaitForChild("Train"):FireServer(unpack(args))
+        end
+    })
 OrionLib:Init()
