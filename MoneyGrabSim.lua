@@ -39,7 +39,7 @@ local Section = Tab2:AddSection({Name = "Train"})
 Section:AddDropdown({
         Name = "Training Level",
         Default = "",
-        Options = {"1","2","3","4"},
+        Options = {"1","2","3","4","5"},
         Callback = function(Value)
             Level = Value
         end
