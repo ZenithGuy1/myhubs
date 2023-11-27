@@ -74,5 +74,7 @@ local Section2 = Tab2:AddSection({Name = "Money"})
 
 Section2:AddSlider({
         Name = "Amount",
-        
+        Min = 1,
+        Max = 100000,
+        Color = Color3.fromRGB(
 OrionLib:Init()
