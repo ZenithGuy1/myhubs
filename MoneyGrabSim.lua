@@ -97,7 +97,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Event"):WaitForChild("WinGain
 
 Section2:AddToggle({
         Name = "Auto Money",
-        Default = false
+        Default = false,
         Callback = function(Value)
             GetMoney = Value
             while GetMoney do
