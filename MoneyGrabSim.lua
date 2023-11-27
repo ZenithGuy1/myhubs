@@ -57,13 +57,16 @@ Section:AddDropdown({
 Section:AddToggle({
         Name = "Auto Train",
         Default = false,
-        Callback = function()
+        Callback = function(Value)
+            Train = Value
+            while Train do
             wait(Speed)
             local args = {
     [1] = Level
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Event"):WaitForChild("Train"):FireServer(unpack(args))
+            end
         end
     })
 OrionLib:Init()
