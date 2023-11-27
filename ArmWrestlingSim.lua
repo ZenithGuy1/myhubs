@@ -34,27 +34,4 @@ Tab:AddButton({
         end
     })
 
-local Section = Tab2:AddSection({Name = "Autoclicker"})
-
-Section:AddDropdown({
-        Name = "Clicker Speed",
-        Default = "0.25",
-        Options = {"0.01","0.05","0.10","0.25","0.50","0.75"},
-        Callback = function(Value)
-            Speed = Value
-        end
-    })
-
-Section:AddToggle({
-        Name = "Autoclicker",
-        Default = false,
-        Callback = function(Value)
-            Clicker = Value
-            while Clicker do
-                wait(Speed)
-                game:GetService("ReplicatedStorage"):WaitForChild("events-shared/network@GlobalEvents"):WaitForChild("placeBlock"):FireServer()
-            end
-        end
-    })
-
 OrionLib:Init()
