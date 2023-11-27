@@ -76,7 +76,7 @@ Section2:AddSlider({
         Name = "Amount",
         Min = 5,
         Max = 100000,
-        Color = Color3.fromRGB(255, 230, 70)
+        Color = Color3.fromRGB(255, 230, 70),
         Increment = 5,
         ValueName = "Cash",
         Callback = function(Value)
