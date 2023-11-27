@@ -42,9 +42,6 @@ Section:AddDropdown({
         Options = {"0","0.01","0.05","0.10","0.25","0.50"},
         Callback = function(Value)
             Speed = Value
-            if Speed == "select..." then
-                Speed = nil
-            end
             print(Speed)
         end
     })
