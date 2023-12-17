@@ -3,7 +3,7 @@ loadstring(game:HttpGet(("https://raw.githubusercontent.com/REDzHUB/LibraryV2/ma
 MakeWindow({
     Hub = {
         Title = "Zenith Hub",
-        Animation = "by @zenithguy"
+        Animation = "by @zenithguyy"
     },
     Key = {
       KeySytem = true,
