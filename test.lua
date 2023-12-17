@@ -21,10 +21,17 @@ MakeWindow({
   })
 
 local Main = MakeTab({Name = "The main"})
-local section = AddSection(Main, {"Teste"})
+local Section = AddSection(Main, {"Teste"})
+
+AddButton(Section, {
+    Name = "Kill na seção",
+    Callback = function()
+      game.Players.LocalPlayer.Character:BreakJoints()
+    end
+})
 
 AddButton(Main, {
-    Name = "Kill",
+    Name = "Kill na aba",
     Callback = function()
       game.Players.LocalPlayer.Character:BreakJoints()
     end
