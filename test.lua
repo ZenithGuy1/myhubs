@@ -21,3 +21,4 @@ MakeWindow({
   })
 
 local Main = MakeTab({Name = "The main"})
+local Section = AddSection(Main, {"Section"})
