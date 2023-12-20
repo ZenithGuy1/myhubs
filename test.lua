@@ -19,3 +19,5 @@ MakeWindow({
             }
         }
 })
+
+local Main = MakeTab({Name = "Main"})
