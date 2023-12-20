@@ -40,6 +40,13 @@ local Items = MakeTab({Name = "Weird Items"})
 
 local Functions = MakeTab({Name = "Player Functions"})
 
+AddButton(Main, {
+        Name = "Destroy GUI",
+        Callback = function()
+            DestroyScript()
+        end
+})
+
 AddButton(Items, {
         Name = "scream",
         Callback = function()
