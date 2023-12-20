@@ -97,7 +97,7 @@ AddToggle(Functions, {
         Callback = function(Value)
             KJP = Value
             while KJP do
-                if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") ~= nil and game.Players.LocalPlayer.Character.Humanoid.JumpPower ~= JP do
+                if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") ~= nil and game.Players.LocalPlayer.Character.Humanoid.JumpPower ~= JP then
                         game.Players.LocalPlayer.Character.Humanoid.JumpPower = JP
                     end
                 end
