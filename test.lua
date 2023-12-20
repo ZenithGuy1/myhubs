@@ -45,11 +45,61 @@ AddButton(Main, {
         Callback = function()
             DestroyScript()
         end
-})
+    })
 
 AddButton(Items, {
         Name = "scream",
         Callback = function()
                 scream()
+            end
+        })
+
+AddSlider(Functions, {
+        Name = "WalkSpeed",
+        MinValue = 30,
+        MaxValue = 100000,
+        Default = 30,
+        Increase = 5,
+        Callback = function(Value)
+            WS = Value
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+        end
+    })
+
+AddToggle(Functions, {
+        Name = "Keep WalkSpeed",
+        Default = false,
+        Callback = function(Value)
+            KWS = Value
+            while KWS do
+                if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") ~= nil and game.Players.LocalPlayer.Character.Humanoid.WalkSpeed ~= WS then
+                    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = WS
+                end
+            end
+        end
+    })
+
+AddSlider(Functions, {
+        Name = "JumpPower",
+        MinValue = 50,
+        MaxValue = 1000,
+        Default = 50,
+        Increase = 5,
+        Callback = function(Value)
+            JP = Value
+            game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+        end
+    })
+
+AddToggle(Functions, {
+        Name = "Keep JumpPower",
+        Default = false,
+        Callback = function(Value)
+            KJP = Value
+            while KJP do
+                if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") ~= nil and game.Players.LocalPlayer.Character.Humanoid.JumpPower ~= JP do
+                        game.Players.LocalPlayer.Character.Humanoid.JumpPower = JP
+                    end
+                end
             end
         })
