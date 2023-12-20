@@ -1,17 +1,21 @@
-local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/Redzlib/main/Source.lua"))()
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/REDzHUB/LibraryV2/main/redzLib")))()
 
-local Window = redzlib:MakeWindow({
-    Menu = {
-      Title = "test",
-    },
-    LoadAnim = {
-      Active = true,
-      Title = "bom dia",
-      WaitTime = 0.7
-    }
-  })
-
-local Tab = Window:MakeTab({
-    Name = "test",
-    Icon = "rbxassetid://7743877573"
-  })
+MakeWindow({
+        Hub = {
+            Title = "Numerous Hub",
+            Animation = "@zenithguy"
+        },
+        Key = {
+            KeySystem = false,
+            Title = "Key System",
+            Description = "",
+            KeyLink = "",
+            Keys = {"None"},
+            Notifi = {
+                Notifications = true,
+                CorrectKey = "Valid Key! Running script...",
+                IncorrectKey = "Invalid key, sorry!",
+                CopyKeyLink = "Copied to clipboard"
+            }
+        }
+})
