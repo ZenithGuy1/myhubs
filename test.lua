@@ -56,10 +56,10 @@ AddButton(Items, {
 
 AddSlider(Functions, {
         Name = "WalkSpeed",
-        MinValue = 30,
-        MaxValue = 100000,
-        Default = 30,
-        Increase = 5,
+        MinValue = 16,
+        MaxValue = 1000,
+        Default = 16,
+        Increase = 1,
         Callback = function(Value)
             WS = Value
             game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
