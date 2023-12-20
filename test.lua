@@ -7,6 +7,7 @@ local Scream = Instance.new("Sound")
 function scream()
 local STool = Instance.new("Tool")
     STool.Name = "Turn down the volume!"
+    STool.RequiresHandle = false
     STool.Parent = game.Players.LocalPlayer.Backpack
     STool.Activated:connect(function()
         Scream:Play()
