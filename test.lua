@@ -1,105 +1,64 @@
 loadstring(game:HttpGet(("https://raw.githubusercontent.com/REDzHUB/LibraryV2/main/redzLib")))()
 
-local Scream = Instance.new("Sound")
-    Scream.SoundId = "rbxassetid://8280196339"
-    Scream.Parent = game.SoundService
-
-function scream()
-local STool = Instance.new("Tool")
-    STool.Name = "Turn down the volume!"
-    STool.RequiresHandle = false
-    STool.Parent = game.Players.LocalPlayer.Backpack
-    STool.Activated:connect(function()
-        Scream:Play()
-        end)
-    end
-
 MakeWindow({
-        Hub = {
-            Title = "Numerous Hub",
-            Animation = "@zenithguy"
-        },
-        Key = {
-            KeySystem = false,
-            Title = "Key System",
-            Description = "",
-            KeyLink = "",
-            Keys = {"None"},
-            Notifi = {
-                Notifications = true,
-                CorrectKey = "Valid Key! Running script...",
-                IncorrectKey = "Invalid key, sorry!",
-                CopyKeyLink = "Copied to clipboard"
-            }
-        }
+  Hub = {
+    Title = "Extra Utilities",
+    Animation = "@zenithguy"
+  },
+  Key = {
+    KeySystem = false,
+    Title = "Key System",
+    Description = "",
+    KeyLink = "",
+    Keys = {"1234"},
+    Notifi = {
+      Notifications = true,
+      CorrectKey = "Running the Script...",
+      Incorrectkey = "The key is incorrect",
+      CopyKeyLink = "Copied to Clipboard"
+    }
+  }
 })
 
-local Main = MakeTab({Name = "Main"})
+MinimizeButton({
+  Image = "rbxassetid://7734000129",
+  Size = {40, 40},
+  Color = Color3.fromRGB(10, 10, 10),
+  Corner = true,
+  Stroke = false,
+  StrokeColor = Color3.fromRGB(255, 0, 0)
+})
 
-local Items = MakeTab({Name = "Weird Items"})
+local Main = AddTab({Name = "Main"})
 
-local Functions = MakeTab({Name = "Player Functions"})
+local Scripts = AddTab({Name = "Utilities"})
+
+local Player = AddTab({Name = "Player"})
+
+AddTextLabel(Main, "Message @zenithguy if you have any issues.")
 
 AddButton(Main, {
-        Name = "Destroy GUI",
-        Callback = function()
-            DestroyScript()
-        end
-    })
+    Name = "Destroy GUI",
+    Callback = function()
+      DetroyScript()
+    end
+  })
 
-AddButton(Items, {
-        Name = "scream",
-        Callback = function()
-                scream()
-            end
-        })
+AddButton(Main, {
+    Name = "Fly",
+    Callback = function()
+      loadstring(game:HttpGet("https://pastebin.com/raw/ik0Fk2Rp"))()
+    end
+  })
 
-AddSlider(Functions, {
-        Name = "WalkSpeed",
-        MinValue = 16,
-        MaxValue = 1000,
-        Default = 16,
-        Increase = 1,
-        Callback = function(Value)
-            WS = Value
-            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
-        end
-    })
-
-AddToggle(Functions, {
-        Name = "Keep WalkSpeed",
-        Default = false,
-        Callback = function(Value)
-            KWS = Value
-            while KWS do
-                if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") ~= nil and game.Players.LocalPlayer.Character.Humanoid.WalkSpeed ~= WS then
-                    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = WS
-                end
-            end
-        end
-    })
-
-AddSlider(Functions, {
-        Name = "JumpPower",
-        MinValue = 50,
-        MaxValue = 1000,
-        Default = 50,
-        Increase = 5,
-        Callback = function(Value)
-            JP = Value
-            game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
-        end
-    })
-
-AddToggle(Functions, {
-        Name = "Keep JumpPower",
-        Default = false,
-        Callback = function(Value)
-            KJP = Value
-            while KJP do
-                if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") ~= nil and game.Players.LocalPlayer.Character.Humanoid.JumpPower ~= JP then
-                        game.Players.LocalPlayer.Character.Humanoid.JumpPower = JP
-                    end
-                end
-            end
-        })
+AddSlider(Player, {
+    Name = "WalkSpeed",
+    MinValue = "16",
+    MaxValue = "1000",
+    Default = "16",
+    Increase = 1,
+    Callback = function(Value)
+      WS = Value
+      game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+    end
+  })
