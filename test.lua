@@ -44,21 +44,23 @@ AddButton(Main, {
     end
   })
 
-AddButton(Main, {
-    Name = "Fly",
+AddButton(Scripts, {
+    Name = "Infinite Yield",
     Callback = function()
-      loadstring(game:HttpGet("https://pastebin.com/raw/ik0Fk2Rp"))()
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Infinite%20Yield%20but%20with%20secure%20dex'))()
     end
   })
 
-AddSlider(Player, {
-    Name = "WalkSpeed",
-    MinValue = "16",
-    MaxValue = "1000",
-    Default = "16",
-    Increase = 1,
-    Callback = function(Value)
-      WS = Value
-      game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+AddButton(Scripts, {
+    Name = "Nameless Admin",
+    Callback = function()
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source'))()
+    end
+  })
+
+AddButton(Scripts, {
+    Name = "Dex Explorer",
+    Callback = function()
+      loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Dex%20Explorer.txt"))()
     end
   })
