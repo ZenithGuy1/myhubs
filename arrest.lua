@@ -1,5 +1,4 @@
-_G.arest = true
-while _G.arest do
+while true do
   wait(0.2)
   local plr = game.Players.LocalPlayer
   local players = game.Players:GetPlayers()
